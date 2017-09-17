@@ -15,3 +15,5 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/.zaliases" ]]; then
   source "${ZDOTDIR:-$HOME}/.zaliases"
 fi
+
+unsetopt correct_all
