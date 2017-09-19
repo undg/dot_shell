@@ -21,3 +21,11 @@ if (( $+commands[fortune] )); then
     print
   fi
 fi
+
+# Print a random, hopefully interesting, adage.
+if (( $+commands[archey3] )); then
+  if [[ -t 0 || -t 1 ]]; then
+    archey3 -c red
+    print
+  fi
+fi
