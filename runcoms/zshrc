@@ -17,3 +17,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zaliases" ]]; then
 fi
 
 unsetopt correct_all
+unsetopt correct
+bindkey -e
+
+# (FIX) CURSOR DISAPEARS WHEN MOVING BACK
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[cursor]=underline

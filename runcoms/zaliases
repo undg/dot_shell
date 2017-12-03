@@ -1,2 +1,4 @@
+alias ls="ls --color"
 alias ll="ls -lah"
+alias rmm="trash"
 alias wping="fping wp.pl -l | cut -d , -f 3-4"
