@@ -17,3 +17,5 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zaliases" ]]; then
 fi
 
 unsetopt correct_all
+unsetopt correct
+bindkey -e
