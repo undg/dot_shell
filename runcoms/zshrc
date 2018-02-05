@@ -23,3 +23,5 @@ bindkey -e
 # (FIX) CURSOR DISAPEARS WHEN MOVING BACK
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[cursor]=underline
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
