@@ -2,3 +2,4 @@ alias ls="ls --color"
 alias ll="ls -lah"
 alias rmm="trash"
 alias wping="fping wp.pl -l | cut -d , -f 3-4"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
