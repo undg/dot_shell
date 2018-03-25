@@ -1,7 +1,13 @@
-alias ls="ls --color"
+alias ls="ls --color=auto"
 alias ll="ls -lah"
 alias rmm="trash"
 alias wping="fping wp.pl -l | cut -d , -f 3-4"
-alias egrep="egrep --color"
-alias grep="grep --color"
+
+alias egrep="egrep --color=auto"
+alias grep="grep --color=auto"
+alias egr="egrep -iHnr"
+alias gr="egrep -iHnr"
+alias cegr="egrep -iHnr --color=always"
+alias cgr="egrep -iHnr --color=always"
+
 alias ranger='ranger --choosedir=$HOME/.rangerdir; cd `cat $HOME/.rangerdir`'
