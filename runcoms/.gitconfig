@@ -1,0 +1,12 @@
+[include]
+  path = ~/.gituser
+[alias]
+	ck = checkout
+	br = branch
+	cm = commit
+	st = status
+	d = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
