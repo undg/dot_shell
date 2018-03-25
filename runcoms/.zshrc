@@ -6,6 +6,9 @@
 #
 
 export TERM="xterm-256color"
+export VISUAL=vim
+export VEDITOR="$VISUAL"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
