@@ -1,13 +1,23 @@
-alias ls="ls --color=auto"
+case `uname` in
+  Linux)
+    alias ls="ls --color=auto"
+    alias rmm="trash"
+  ;;
+  Darwin)
+    alias ls="ls -G"
+  ;;
+esac
+
 alias ll="ls -lah"
-alias rmm="trash"
 alias wping="fping wp.pl -l | cut -d , -f 3-4"
 
 alias egrep="egrep --color=auto"
 alias grep="grep --color=auto"
 alias egr="egrep -iHnr"
-alias gr="egrep -iHnr"
+alias gr="grep -iHnr"
 alias cegr="egrep -iHnr --color=always"
 alias cgr="egrep -iHnr --color=always"
 
 alias ranger='ranger --choosedir=$HOME/.rangerdir; cd `cat $HOME/.rangerdir`'
+
+# vim: filetype=sh
