@@ -30,3 +30,13 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[cursor]=underline
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+case `uname` in
+  Linux)
+    # remap capslock to ctrl
+    setxkbmap -layout us -option ctrl:nocaps
+  ;;
+  Darwin)
+  ;;
+esac
