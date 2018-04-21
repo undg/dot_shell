@@ -27,13 +27,13 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
-  'git' \
-  'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
   'syntax-highlighting' \
+  'git' \
+  'history' \
   'tmux' \
   'prompt'
 
