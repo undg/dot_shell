@@ -34,9 +34,12 @@ ZSH_HIGHLIGHT_STYLES[cursor]=underline
 
 case `uname` in
   Linux)
+    if [ -x "setxkbmap -layout us -option ctrl:nocaps " ]; then
+      echo 'remap capslock'
+      exit 1
+    fi
     # remap capslock to ctrl
-    setxkbmap -layout us -option ctrl:nocaps
-  ;;
+      ;;
   Darwin)
   ;;
 esac
