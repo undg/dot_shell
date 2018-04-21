@@ -5,8 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-export TERM="xterm-256color"
-export VISUAL=vim
+export TERM="screen-256color"
+export VISUAL=nvim
 export VEDITOR="$VISUAL"
 export PATH=$HOME/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/lib/:$LD_LIBRARY_PATH
