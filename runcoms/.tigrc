@@ -1,5 +1,5 @@
 set refresh-mode = periodic
-set refresh-interval = 2
+set refresh-interval = 1
 
 bind generic h scroll-left
 bind generic j move-down
