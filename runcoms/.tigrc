@@ -3,13 +3,15 @@
 set refresh-mode = periodic
 set refresh-interval = 5
 
+
 # VIEW
 #######
 set main-view	= line-number:no,interval=5 \
-  id:yes,width=4\
+  id:yes,width=6\
   date:relative-compact  \
   author:full,width=3 \
   commit-title:yes,graph=v2,refs,overflow=no
+
 
 # KEY BINDINGS
 ################
@@ -82,10 +84,7 @@ bind generic @+ :toggle diff-context +1
 bind generic K view-help
 bind generic <C-w><C-w> view-next
 
-
-
-
-# colors
+# COLORS
 ###########
 
 # The colors in the UI can be customized. In addition to the colors used
@@ -197,6 +196,7 @@ color palette-13		red	default	bold
 color graph-commit		blue	default
 color search-result		black	yellow
 
+
 # Mappings for colors read from git configuration.
 # Set to "no" to disable.
 set git-colors = \
@@ -226,4 +226,5 @@ set git-colors = \
 	status.changed=stat-unstaged \
 	status.untracked=stat-untracked
 
-# vim: set ft=sh:
+# vim: set ft=tmux:
+# vim: foldmethod=expr foldexpr=getline(v\:lnum)=~'^\\s*$'&&getline(v\:lnum+1)=~'^\\s*$'&&getline(v\:lnum+2)=~'\\S'?'<1'\:1

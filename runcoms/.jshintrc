@@ -89,7 +89,7 @@
     // Custom Globals
     "globals"       : {
       "$": false,
-      "required": true,
+      "require": true,
       "KT": true
     }        // additional predefined global variables
 }
