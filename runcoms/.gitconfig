@@ -6,7 +6,10 @@
 	cm = commit
 	st = status
 	d = difftool
+  l = log --decorate --oneline --graph
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
+[core]
+	pager = less -iXFRE
