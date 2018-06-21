@@ -77,9 +77,23 @@ bind generic @+ :toggle diff-context +1
 # bind generic ul stage-update-line
 # bind generic us stage-split-chunk
 
-# bind generic c  none
+bind generic c  none
 # bind generic cc !git commit
 # bind generic ca !?@git commit --amend --no-edit
+bind main      C !git cherry-pick %(commit)
+
+
+# tig-ck sh script make it executable
+#######################################
+# #!/bin/sh
+# if [ `git show-ref --head | grep heads/$2 | cut -f 1 -d " "` = $1 ]
+# then
+#   git checkout $2
+# else
+#   git checkout $1
+# fi
+#######################################
+bind main      c !tig-ck %(commit) %(branch)
 
 bind generic K view-help
 bind generic <C-w><C-w> view-next
