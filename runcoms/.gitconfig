@@ -14,5 +14,6 @@
 	trustExitCode = true
 [core]
 	pager = less -iXFRE
+	filemode = false
 [mergetool]
 	trustExitCode = true
