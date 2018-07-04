@@ -11,5 +11,8 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+	trustExitCode = true
 [core]
 	pager = less -iXFRE
+[mergetool]
+	trustExitCode = true
