@@ -63,11 +63,11 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-if [ -f ~/.xmodmap ]; then
-  if [ -x "$(command -v xmodmap)" ]; then
-    xmodmap ~/.xmodmap
-  fi
-fi
+# if [ -f ~/.xmodmap ]; then
+#   if [ -x "$(command -v xmodmap)" ]; then
+#     xmodmap ~/.xmodmap
+#   fi
+# fi
 
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 

@@ -14,16 +14,20 @@
   fi
 } &!
 
-# Print a random, hopefully interesting, adage.
-if (( $+commands[fortune] )); then
+
+# Print a static or dynamic, hopefully interesting, adage.
+# First "if installed" win [unix, fortune, archey3]
+if (( $+commands[unix] )); then
+  if [[ -t 0 || -t 1 ]]; then
+    unix
+    print
+  fi
+elif (( $+commands[fortune] )); then
   if [[ -t 0 || -t 1 ]]; then
     fortune -s
     print
   fi
-fi
-
-# Print a random, hopefully interesting, adage.
-if (( $+commands[archey3] )); then
+elif (( $+commands[archey3] )); then
   if [[ -t 0 || -t 1 ]]; then
     archey3 -c red
     print
