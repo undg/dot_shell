@@ -10,6 +10,7 @@ esac
 
 alias vim="nvim"
 alias ll="ls -lah"
+alias la="ls -a"
 alias wping="fping wp.pl -l | cut -d , -f 3-4"
 
 alias egrep="egrep --color=auto"
