@@ -8,6 +8,7 @@
 	d = difftool
   l = log --decorate --oneline --graph
   m = merge --no-ff
+  ff = merge --ff-only
 [diff]
 	tool = vimdiff
 [difftool]
