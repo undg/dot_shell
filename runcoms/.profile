@@ -5,6 +5,7 @@
 path=(
   /usr/local/{bin,sbin}
   ~/bin
+  ~/.zprezto/bin
   $path
 )
 
