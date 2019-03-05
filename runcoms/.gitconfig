@@ -1,21 +1,22 @@
 [include]
-  path = ~/.gituser
+    path = ~/.gituser
 [alias]
-	ck = checkout
-	br = branch
-	cm = commit
-	st = status
-	d = difftool
-  l = log --decorate --oneline --graph
-  m = merge --no-ff
-  ff = merge --ff-only
+    ck = checkout
+    br = branch
+    cm = commit
+    st = status
+    d = difftool
+    l = log --decorate --oneline --graph
+    m = merge --no-ff
+    ff = merge --ff-only
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
-	trustExitCode = true
+    prompt = false
+    trustExitCode = true
 [core]
-	pager = less -iXFRE
-	filemode = false
+    pager = less -iXFRE
+    filemode = false
+    commentChar = ";"
 [mergetool]
-	trustExitCode = true
+    trustExitCode = true
