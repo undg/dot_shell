@@ -95,7 +95,7 @@ bind main      C !git cherry-pick %(commit)
 #######################################
 bind main      c !tig-ck %(commit) %(branch)
 
-bind generic K view-help
+bind generic H view-help
 bind generic <C-w><C-w> view-next
 
 # COLORS
