@@ -1,17 +1,28 @@
 case `uname` in
-  Linux)
-    alias ls="ls --color=auto"
-    alias rmm="trash"
-  ;;
-  Darwin)
-    alias ls="ls -G"
-  ;;
+    Linux)
+        alias ls="ls --color=auto"
+        alias rmm="trash"
+        ;;
+    Darwin)
+        alias ls="ls -G"
+        ;;
 esac
 
-alias vim="nvim"
+if hash nvim 2>/dev/null; then
+    alias vim="nvim"
+fi
+if hash vim 2>/dev/null; then
+    alias v="vim"
+else
+    alias v="vi"
+fi
+
 alias ll="ls -lah"
 alias la="ls -a"
-alias wping="fping wp.pl -l | cut -d , -f 3-4"
+
+if hash fping @./dev/null; then
+    alias wping="fping wp.pl -l | cut -d , -f 3-4"
+fi
 
 alias egrep="egrep --color=auto"
 alias grep="grep --color=auto"
@@ -20,9 +31,13 @@ alias gr="grep -iHnr"
 alias cegr="egrep -iHnr --color=always"
 alias cgr="egrep -iHnr --color=always"
 
-alias ranger='ranger --choosedir=$HOME/.rangerdir; cd `cat $HOME/.rangerdir`'
+if hash ranger 2>/dev/null; then
+    alias ranger='ranger --choosedir=$HOME/.rangerdir; cd `cat $HOME/.rangerdir`'
+fi
 
 # cd to git root
-alias gcd='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+if hash git 2>/dev/null; then
+    alias gcd='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+fi
 
 # vim: filetype=sh
