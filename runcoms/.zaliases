@@ -20,7 +20,7 @@ fi
 alias ll="ls -lah"
 alias la="ls -a"
 
-if hash fping @./dev/null; then
+if hash fping 2>/dev/null; then
     alias wping="fping wp.pl -l | cut -d , -f 3-4"
 fi
 
