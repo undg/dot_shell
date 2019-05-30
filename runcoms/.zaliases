@@ -40,4 +40,9 @@ if hash git 2>/dev/null; then
     alias gcd='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 fi
 
+# screensaver
+if hash cmatrix 2>/dev/null; then
+    alias s='cmatrix -absCcyan'
+fi
+
 # vim: filetype=sh
