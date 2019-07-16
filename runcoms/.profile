@@ -13,6 +13,7 @@ path=(
 export PATH="$(du "$HOME/.config/i3/scripts/" | cut -f2 | tr '\n' ':')$PATH"
 export EDITOR="nvim"
 export TERMINAL="termite"
+export TERMINAL2="st"
 export BROWSER="chromium"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
