@@ -1,8 +1,5 @@
 #
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+# Useless comment with useless stuff
 #
 
 # export TERM="screen-256color"
@@ -34,12 +31,14 @@ unsetopt correct_all
 unsetopt correct
 bindkey -e
 
-# (FIX) CURSOR DISAPEARS WHEN MOVING BACK
+# (FIX) CURSOR DISAPPEARS WHEN MOVING BACK
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[cursor]=underline
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# real vi experience in CLI ;-D
+bindkey -v
 
 # case `uname` in
 #   Linux)
