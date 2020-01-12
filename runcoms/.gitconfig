@@ -17,6 +17,6 @@
 [core]
     pager = less -iXFRE
     filemode = false
-    commentChar = ";"
+    commentChar = "#"
 [mergetool]
     trustExitCode = true

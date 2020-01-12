@@ -1,14 +1,13 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/bartek/.fzf/bin* ]]; then
-  export PATH="$PATH:/home/bartek/.fzf/bin"
+if [[ ! "$PATH" == */home/undg/.fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/home/undg/.fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/bartek/.fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/home/undg/.fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/bartek/.fzf/shell/key-bindings.bash"
-
+source "/home/undg/.fzf/shell/key-bindings.bash"
