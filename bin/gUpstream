@@ -24,6 +24,7 @@ function askYesNo {
         fi
 }
 
+git br --remotes | grep $(git rev-parse --abbrev-ref HEAD)
 echo "git $ARGUMENTS"
 askYesNo "Continue?" true
 
