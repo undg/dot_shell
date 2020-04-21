@@ -12,8 +12,8 @@ path=(
 # Adds `~/.config/i3/scripts` and all subdirectories to $PATH
 export PATH="$(du "$HOME/.config/i3/scripts/" | cut -f2 | tr '\n' ':')$PATH"
 export EDITOR="nvim"
-export TERMINAL="st"
-export TERMINAL2="termite"
+export TERMINAL="termite"
+export TERMINAL2="st"
 export BROWSER="chromium"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"

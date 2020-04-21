@@ -1,12 +1,15 @@
 case `uname` in
     Linux)
         alias ls="ls --color=auto"
-        alias rmm="trash"
         ;;
     Darwin)
         alias ls="ls -G"
         ;;
 esac
+
+if hash cmatrix 2>/dev/null; then
+    alias rmm="trash"
+fi
 
 if hash nvim 2>/dev/null; then
     alias vim="nvim"
@@ -51,6 +54,12 @@ if hash trans 2>/dev/null; then
     alias tp='trans pl:en'
 else
     echo "translate-shell is missing,\r\nget it from http://git.io/trans"
+fi
+
+if hash exa 2>/dev/null; then 
+    alias ls='exa'
+else
+    echo "exa is missing,\r\ninstall it from repository."
 fi
 
 # vim: filetype=sh
