@@ -57,7 +57,7 @@ else
 fi
 
 if hash exa 2>/dev/null; then 
-    alias ls='exa'
+    alias ls='exa --git'
 else
     echo "exa is missing,\r\ninstall it from repository."
 fi
