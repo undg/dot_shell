@@ -20,7 +20,7 @@ else
     alias v="vi"
 fi
 
-alias ll="ls -lah"
+alias ll="ls -lahg"
 alias la="ls -a"
 
 if hash fping 2>/dev/null; then
@@ -41,6 +41,8 @@ fi
 # cd to git root
 if hash git 2>/dev/null; then
     alias gcd='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+else
+    echo "git is missing,\r\nInstall it now!!!"
 fi
 
 # screensaver
@@ -60,6 +62,12 @@ if hash exa 2>/dev/null; then
     alias ls='exa --git'
 else
     echo "exa is missing,\r\ninstall it from repository."
+fi
+
+if hash exa 2>/dev/null; then 
+    alias ag='ag --smart-case'
+else
+    echo "ag is missing,\r\ninstall it from repository."
 fi
 
 # vim: filetype=sh
