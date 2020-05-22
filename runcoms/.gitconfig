@@ -21,7 +21,7 @@
     p = pull
     pp = pull --prune
     pr = pull --rebase
-    rpack = checkout HEAD -- package-lock.json   
+    rp = checkout HEAD -- package-lock.json   
 
 [diff]
     tool = vimdiff
