@@ -18,8 +18,8 @@
     l = log --decorate --oneline --graph
     m = merge --no-ff
     ff = merge --ff-only
+    pull = pull --prune
     p = pull
-    pp = pull --prune
     pr = pull --rebase
     rp = checkout HEAD -- package-lock.json   
 
