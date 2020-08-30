@@ -51,3 +51,4 @@ bindkey -v
 #   Darwin)
 #   ;;
 # esac
+source /usr/share/nvm/init-nvm.sh
