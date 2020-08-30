@@ -1,3 +1,4 @@
+# vim: ts=2 sw=2
 #
 # Useless comment with useless stuff
 #
@@ -29,26 +30,35 @@ fi
 
 unsetopt correct_all
 unsetopt correct
-bindkey -e
+
+# Emacs key bindings
+# bindkey -e
+
+# Real VI experience in CLI ;-D
+bindkey -v
+
+bindkey '^H' backward-kill-word # ctrl + backspace
+bindkey '^r' history-incremental-search-backward
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+precmd() { RPROMPT="" }
+function zle-line-init zle-keymap-select {
+  VIM_PROMPT="[% NORMAL]%"
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+export KEYTIMEOUT=1
+
+
 
 # (FIX) CURSOR DISAPPEARS WHEN MOVING BACK
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[cursor]=underline
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# real vi experience in CLI ;-D
-bindkey -v
-
-# case `uname` in
-#   Linux)
-#     if [ -x "setxkbmap -layout us -option ctrl:nocaps " ]; then
-#       echo 'remap capslock'
-#       exit 1
-#     fi
-#     # remap capslock to ctrl
-#       ;;
-#   Darwin)
-#   ;;
-# esac
 source /usr/share/nvm/init-nvm.sh

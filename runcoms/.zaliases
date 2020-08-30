@@ -1,4 +1,4 @@
-# vim: filetype=sh
+# vim: ts=2 sw=2 ft=sh
 
 case `uname` in
     Linux)
