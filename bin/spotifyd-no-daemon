@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+killall spotifyd && 
+spotifyd --no-daemon
+
+notify-send "RESTART spotifyd"

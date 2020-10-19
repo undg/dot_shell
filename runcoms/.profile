@@ -12,9 +12,10 @@ path=(
 # Adds `~/.config/i3/scripts` and all subdirectories to $PATH
 export PATH="$(du "$HOME/.config/i3/scripts/" | cut -f2 | tr '\n' ':')$PATH"
 export EDITOR="nvim"
-export TERMINAL="termite"
-export TERMINAL2="st"
-export BROWSER="chromium"
+export TERMINAL="alacritty"
+# export TERMINAL2="st"
+# export BROWSER="chromium"
+export BROWSER="firefox-developer-edition"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
 export REFER="$HOME/.referbib"
@@ -44,4 +45,4 @@ fi
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
 
 # Switch escape and caps and use wal colors if tty:
-sudo -n loadkeys ~/.config/i3/scripts/ttymaps.kmap 2>/dev/null
+# sudo -n loadkeys ~/.config/i3/scripts/ttymaps.kmap 2>/dev/null

@@ -37,3 +37,5 @@
 
 [mergetool]
     trustExitCode = true
+[rebase]
+	abbreviateCommands = true
