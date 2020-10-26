@@ -39,3 +39,5 @@
     trustExitCode = true
 [rebase]
 	abbreviateCommands = true
+[pull]
+	ff = only
