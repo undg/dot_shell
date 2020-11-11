@@ -14,11 +14,13 @@ export PATH="$(du "$HOME/.config/i3/scripts/" | cut -f2 | tr '\n' ':')$PATH"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 # export TERMINAL2="st"
-# export BROWSER="chromium"
-export BROWSER="firefox-developer-edition"
+export BROWSER="chromium"
+export CHROME="chromium"
+export BROWSER2="firefox-developer-edition"
+export FIREFOX="firefox-developer-edition"
 export READER="zathura"
-export BIB="$HOME/Documents/LaTeX/uni.bib"
-export REFER="$HOME/.referbib"
+# export BIB="$HOME/Documents/LaTeX/uni.bib"
+# export REFER="$HOME/.referbib"
 # PIX is here I have LARBS keep icons. Subject to change, hence a variable.
 export PIX="$HOME/.config/i3/scripts/pix"
 export SUDO_ASKPASS="$HOME/.config/i3/scripts/tools/dmenupass"
@@ -33,7 +35,7 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
-[ ! -f ~/.shortcuts ] && shortcuts >/dev/null 2>&1
+# [ ! -f ~/.shortcuts ] && shortcuts >/dev/null 2>&1
 
 if [[ -f ~/.zshrc ]]; then
   source "$HOME/.zshrc"
