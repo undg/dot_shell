@@ -56,6 +56,7 @@ fi
 # translation with http://git.io/trans
 if hash trans 2>/dev/null; then 
     alias t='trans en:pl'
+    alias ts='trans en:pl -speak'
     alias tp='trans pl:en'
 else
     echo "translate-shell is missing,\r\nget it from http://git.io/trans"
