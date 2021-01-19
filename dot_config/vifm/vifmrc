@@ -1,4 +1,4 @@
-" vim: filetype=vifm :
+" vim: filetype=vim :
 " Sample configuration file for vifm (last updated: 9 September, 2020)
 " You can edit this file by hand.
 " The " character at the beginning of a line comments out the line.
@@ -12,8 +12,6 @@
 " you will need to change this setting.
 
 set vicmd=nvim
-" set vicmd=elvis\ -G\ termcap
-" set vicmd=vile
 
 " This makes vifm perform file operations on its own instead of relying on
 " standard utilities like `cp`.  While using `cp` and alike is a more universal
@@ -406,6 +404,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " ------------------------------------------------------------------------------
 
 " Sample mappings
+
+" Select like in ranger
+nnoremap <Space> t<Down>
 
 " Start shell in current directory
 nnoremap s :shell<cr>
