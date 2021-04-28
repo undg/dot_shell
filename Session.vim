@@ -7,14 +7,17 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 runcoms/.tmux.conf
+badd +0 init.zsh
 argglobal
-silent! argdel *
-$argadd runcoms/.tmux.conf
-edit runcoms/.tmux.conf
+%argdel
+$argadd init.zsh
+edit init.zsh
 set splitbelow splitright
 wincmd t
-set winminheight=1 winminwidth=1 winheight=1 winwidth=1
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
 argglobal
 setlocal fdm=indent
 setlocal fde=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'^\\s*$'&&getline(v:lnum+2)=~'\\S'?'<1':1
@@ -24,18 +27,22 @@ setlocal fdl=9
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 262 - ((20 * winheight(0) + 17) / 35)
+74
+normal! zo
+85
+normal! zo
+let s:l = 90 - ((65 * winheight(0) + 36) / 73)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-262
-normal! 0154|
+90
+normal! 05|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOc
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcA
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)

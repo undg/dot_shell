@@ -2,4 +2,5 @@
 *.zwc.old
 modules/*/cache.zsh
 .customrc
+Session.vim
 
