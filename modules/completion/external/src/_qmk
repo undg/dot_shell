@@ -17,6 +17,12 @@ _qmk_flash(){
     _arguments \
         '-h[Print help text.]' \
         '--help[Print help text.]' \
+        '-c[Remove object files before compiling.]' \
+        '--clean[Remove object files before compiling]' \
+        '-e[Set a variable to be passed to make. May be passed multiple times.]' \
+        '--env[Set a variable to be passed to make. May be passed multiple times.]' \
+        '-j[Set the number of parallel make jobs to run.]' \
+        '--parallel[Set the number of parallel make jobs to run.]' \
         "-n[Don't actually build, just show the make command to be run.]::_qmk_flash" \
         "--dry-run[Don't actually build, just show the make command to be run.]::_qmk_flash" \
         '-km[The keymap to build a firmware for. Ignored when a configurator export is supplied.]::_qmk_flash' \
@@ -148,16 +154,20 @@ _qmk_command(){
 }
 
 
-_arguments \    
+_arguments \
     '-h[Print help text.]' \
     '--help[Print help text.]' \
     '-V[Prints version information]' \
     '--version[Prints version information]' \
     '--datetime-fmt[Format string for datetimes]:DATETIME_FMT:()' \
-    '--log-fmt[Format string for printed log output]' \
-    '--log-file-fmt[Format string for log file.]' \
+    '--log-fmt[Format string for printed log output]:LOG_FMT:()' \
+    '--log-file-fmt[Format string for log file.]:LOG_FILE_FMT:()' \
+    '--log-file-level[Logging level for log file]:debug,info,warning,error,critical' \
     '--log-file[File to write log messages to]:filename:_files' \
     '--color[Enable color in output]' \
     '--no-color[Disable color in output]' \
+    '--unicode[Enable unicode loglevels]' \
+    '--no-unicode[Disable unicode loglevels]' \
     '--config-file[The location for the configuration file]:filename:_files' \
     '*::qmk commands:_qmk_command'
+
