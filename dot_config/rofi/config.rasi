@@ -5,12 +5,18 @@ configuration {
 	modi: "window,drun,ssh,calc,combi";
 	combi-modi: "window,drun,ssh";
 	theme: "gruvbox-dark-soft";
-	font: "hack 22";
+	/* font: "hack 22"; */
+	font: "JetBrains 16";
 	show-icons: true;
 	sidebar-mode: true;
+	width: 45;
+	lines: 24;
+	columns: 1;
 
-	kb-row-left                :  "Super+h";
-	kb-row-right               :  "Super+l";
+	kb-mode-next               :  "Super+l,Control+l,Shift+Right,Control+Tab";
+	kb-mode-previous           :  "Super+h,Control+h,Shift+Left,Control+ISO_Left_Tab";
+	kb-row-left                :  "";
+	kb-row-right               :  "";
 	kb-row-up                  :  "Super+k,Up,Control+k,ISO_Left_Tab";
 	kb-row-down                :  "Super+j,Down,Control+j";
 	kb-row-tab                 :  "Tab";
@@ -33,8 +39,6 @@ configuration {
 	kb-accept-custom           :  "Control+Return";
 	kb-accept-alt              :  "Shift+Return";
 	kb-delete-entry            :  "Shift+Delete";
-	kb-mode-next               :  "Control+l,Shift+Right,Control+Tab";
-	kb-mode-previous           :  "Control+h,Shift+Left,Control+ISO_Left_Tab";
 	kb-page-prev               :  "Page_Up";
 	kb-page-next               :  "Page_Down";
 	kb-row-first               :  "Home,KP_Home";
@@ -83,9 +87,6 @@ configuration {
 	me-accept-custom           :  "Control+MouseDPrimary";
 	click-to-exit              :  false;
 
-	width: 75;
-	lines: 24;
-	columns: 3;
 	bw: 1;
 	location: 0;
 	padding: 25;
