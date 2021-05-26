@@ -36,6 +36,9 @@ unsetopt correct
 
 # Real VI experience in CLI ;-D
 bindkey -v
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd ' ' edit-command-line
 
 bindkey '^H' backward-kill-word # ctrl + backspace
 bindkey '^r' history-incremental-search-backward
