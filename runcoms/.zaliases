@@ -1,29 +1,21 @@
 # vim: ts=2 sw=2 ft=sh
 
-case `uname` in
-    Linux)
-        alias ls="ls --color=auto"
-        ;;
-    Darwin)
-        alias ls="ls -G"
-        ;;
-esac
-
-if hash cmatrix 2>/dev/null; then
-    alias rmm="trash"
-fi
-
-if hash nvim 2>/dev/null; then
-    alias vim="nvim"
-fi
-if hash vim 2>/dev/null; then
-    alias v="vim"
+if hash exa 2>/dev/null; then 
+    alias ls='exa --git'
 else
-    alias v="vi"
+    echo "exa is missing,\r\ninstall it from repository."
 fi
 
 alias ll="ls -lahg"
 alias la="ls -a"
+alias lt="ls --sort newest"
+alias llt="ll --sort newest"
+alias ltr="ls --sort oldest"
+alias lltr="ll --sort oldest"
+
+if hash nvim 2>/dev/null; then
+    alias vim="nvim"
+fi
 
 if hash fping 2>/dev/null; then
     alias wping="fping wp.pl -l | cut -d , -f 3-4"
@@ -38,6 +30,11 @@ alias cgr="egrep -iHnr --color=always"
 
 if hash ranger 2>/dev/null; then
     alias ranger='ranger --choosedir=$HOME/.rangerdir; cd `cat $HOME/.rangerdir`'
+    alias ra="ranger"
+fi
+
+if hash trash 2>/dev/null; then
+    alias rmm="trash"
 fi
 
 # cd to git root
@@ -62,11 +59,6 @@ else
     echo "translate-shell is missing,\r\nget it from http://git.io/trans"
 fi
 
-if hash exa 2>/dev/null; then 
-    alias ls='exa --git'
-else
-    echo "exa is missing,\r\ninstall it from repository."
-fi
 
 if hash exa 2>/dev/null; then 
     alias ag='ag --smart-case'

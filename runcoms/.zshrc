@@ -40,10 +40,19 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd ' ' edit-command-line
 
+# Give some love to emacs
 bindkey '^H' backward-kill-word # ctrl + backspace
 bindkey '^r' history-incremental-search-backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+
+# Better history with arrow up and down
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 precmd() { RPROMPT="" }
 function zle-line-init zle-keymap-select {
@@ -65,7 +74,7 @@ ZSH_HIGHLIGHT_STYLES[cursor]=underline
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Now nvm, node and npm are  loaded on their first invocation, posing no start up time penalty for the shells that aren’t going to use them at all.
+# Now nvm, node and npm are loaded on their first invocation, posing no start up time penalty for the shells that aren’t going to use them at all.
 nvm() {
     unset -f nvm
     export NVM_DIR=~/.nvm
