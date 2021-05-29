@@ -7,11 +7,23 @@ window:
 scrolling:
   history: 90000
 
+# Get list of the font names with this command:
+# fc-list|cut -d : -f 2|sort -u
 font:
   normal:
-    family: JetBrains Mono
-    # family: Hack Nerd Font Mono
-  size: 10.0
+    family:
+      # RobotoMono Nerd Font
+      # CodeNewRoman Nerd Font
+      # UbuntuMono Nerd Font
+      mononoki Nerd Font
+      # Source Code Pro
+      # Hack Nerd Font
+      # JetBrainsMono Nerd Font
+      # Monofur Nerd Font
+      # TerminessTTF Nerd Font
+      # monospace
+      # Inconsolata
+  size: 14.0
   #offset:
   #  x: 0
   #  y: 0
