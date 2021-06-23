@@ -2,11 +2,10 @@
 /* ~/.config/rofi/config.rasi */
 
 configuration {
-	modi: "window,drun,ssh,calc,combi";
-	combi-modi: "window,drun,ssh";
+	modi: "drun,combi,window,calc";
+	combi-modi: "window,drun,calc";
 	theme: "gruvbox-dark-soft";
-	/* font: "hack 22"; */
-	font: "JetBrains 16";
+	font: "mononoki Nerd Font 13";
 	show-icons: true;
 	sidebar-mode: true;
 	width: 45;
