@@ -54,7 +54,7 @@ if zstyle -t ':prezto:module:completion:*' case-sensitive; then
   setopt CASE_GLOB
 else
   zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-  unsetopt CASE_GLOB
+  #unsetopt CASE_GLOB
 fi
 
 # Group matches and describe.
