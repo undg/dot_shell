@@ -7,15 +7,25 @@
 export TERM="xterm-256color"
 export VISUAL=nvim
 export VEDITOR="$VISUAL"
-export PATH=$HOME/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/lib/:$LD_LIBRARY_PATH
 
 export NPM_PACKAGES="${HOME}/npm-packages"
-export PATH="$NPM_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# export PATH=$HOME/bin:$PATH
+# export PATH="$NPM_PACKAGES/bin:$PATH"
+if [[ -d "$HOME/.local/bin/" ]]; then
+    export PATH="$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':')$PATH"
+fi
+if [[ -d "$HOME/.deno/bin/" ]]; then
+  export PATH="$HOME/.deno/bin:$PATH"
+fi
+if [[ -f ~/.customprofile ]]; then
+    source "$HOME/.customprofile"
+fi
 
 
 # Source Prezto.

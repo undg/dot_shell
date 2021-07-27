@@ -3,10 +3,10 @@
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
-  ~/bin
-  ~/.zprezto/bin
-  $path
+    /usr/local/{bin,sbin}
+    ~/bin
+    ~/.zprezto/bin
+    $path
 )
 export PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
 # Adds `~/.config/i3/scripts` and all subdirectories to $PATH
@@ -41,9 +41,9 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # [ ! -f ~/.shortcuts ] && shortcuts >/dev/null 2>&1
 
 if [[ -f ~/.zshrc ]]; then
-  source "$HOME/.zshrc"
+    source "$HOME/.zshrc"
 elif [[ -f ~/.bashrc ]]; then
-  source "$HOME/.bashrc"
+    source "$HOME/.bashrc"
 fi
 
 # Start graphical server if i3 not already running.
