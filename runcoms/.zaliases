@@ -13,6 +13,8 @@ alias llt="ll --sort newest"
 alias ltr="ls --sort oldest"
 alias lltr="ll --sort oldest"
 
+alias fr="find . -regex "
+
 if hash nvim 2>/dev/null; then
     alias vim="nvim"
 fi
@@ -64,7 +66,7 @@ else
 fi
 
 
-if hash exa 2>/dev/null; then 
+if hash ag 2>/dev/null; then 
     alias ag='ag --smart-case'
 else
     echo "ag is missing,\r\ninstall it from repository."
