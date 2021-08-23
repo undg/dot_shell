@@ -78,3 +78,4 @@ else
     echo "yarn is missing,\r\ninstall it from repository."
 fi
 
+alias vimwiki='nvim -c VimwikiIndex'
