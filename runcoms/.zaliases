@@ -79,3 +79,10 @@ else
 fi
 
 alias vimwiki='nvim -c VimwikiIndex'
+
+if hash xclip 2>/dev/null; then 
+    alias xclip='xclip -sel c'
+else
+    echo "xclip is missing,\r\ninstall it from repository."
+fi
+
